@@ -580,8 +580,8 @@ class AgentPlayMode:
                 if self.pause_start_time:
                     self.total_pause_time += time.time() - self.pause_start_time
                     self.pause_start_time = None
-            
-            # Check if it's time to ask for human advice (adjusted for multiple steps per frame)
+
+            #Check if it's time to ask for human advice (adjusted for multiple steps per frame)
             if self.step_count > 0 and self.step_count % (self.advice_frequency * self.logic_steps_per_frame) == 0:
                 print(f"\nStep {self.step_count}: Requesting human advice in {self.current_advice_mode} mode...")
                 advice_action = self.request_human_advice()
